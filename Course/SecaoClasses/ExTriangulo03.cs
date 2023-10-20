@@ -27,11 +27,8 @@ namespace Course.SecaoClasses
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double pX = (x.A + x.B + x.C) / 2.0;
-            double areaX = Math.Sqrt(pX * (pX - x.A) * (pX - x.B) * (pX - x.C));
-
-            double pY = (y.A + y.B + y.C) / 2.0;
-            double areaY = Math.Sqrt(pY * (pY - y.A) * (pY - y.B) * (pY - y.C));
+            double areaX = x.Area();
+            double areaY = y.Area();
 
             Console.WriteLine("Área de x = " + areaX.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("Área de y = " + areaY.ToString("F4", CultureInfo.InvariantCulture));
